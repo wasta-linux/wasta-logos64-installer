@@ -1,0 +1,20 @@
+Source: wasta-logos64-installer
+Section: utils
+Priority: optional
+Maintainer: Rik Shaw <rikshaw76@gmail.com>
+Build-Depends: debhelper (>= 8.0.0)
+Standards-Version: 3.9.5
+Homepage: https://github.com/wasta-linux/wasta-logos64-installer
+
+Package: wasta-logos64-installer
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Logos 64bit Installer
+ Bundled Logos 64bit installer split into 45M chunks for github compatibility.
+ Logos-x64.msi is re-assembled by the postinst script.
+ .
+ Create md5 file: md5sum Logos-x64.msi > Logos-x64.msi.md5
+ .
+ Split into chunks: split -d -b 45M Logos-x64.msi Logos-x64-
+ .
+ Merge: cat Logos-x64-* > Logos-x64.msi
