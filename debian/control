@@ -8,9 +8,13 @@ Homepage: https://github.com/wasta-linux/wasta-logos64-installer
 
 Package: wasta-logos64-installer
 Architecture: amd64
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}
 Description: Logos 64bit Installer
  Bundled Logos 64bit installer split into 45M chunks for github compatibility.
+ .
+ Download links need to be manually cobbled to find them. Example:
+ https://downloads.logoscdn.com/LBS9/Installer/9.9.0.0016/Logos-x64.msi
+ .
  Logos-x64.msi is re-assembled by the postinst script.
  .
  Create md5 file: md5sum Logos-x64.msi > Logos-x64.msi.md5
